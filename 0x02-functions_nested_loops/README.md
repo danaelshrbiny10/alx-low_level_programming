@@ -8,7 +8,7 @@ in C while practicing declaring and defining my own functions.
 ## Tasks :
 
 * **0. _putchar**
-  * [0-putchar.c](./0-putchar.c): C program that prints `Holberton`, followed by a
+  * [0-putchar.c](./0-putchar.c): C program that prints `_putchar`, followed by a
   new line. Returns 0.
 
 * **1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game**
