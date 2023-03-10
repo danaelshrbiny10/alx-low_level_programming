@@ -1,28 +1,29 @@
-#include<stdio.h>
-#include "main.h"
+/*****************************************************************************/
+/*                                                                           */
+/*                                               _____  ______    ____  ___  */
+/* 0-memset.c                                   /  _  \ |    |    \   \/  /  */
+/*                                             /  /_\  \|    |     \     /   */
+/* By: Barahmou   <hamabarhamou@gmail.com>    /    |    \    |___  /     \   */
+/*                                            \____|__  /_______ \/___/\  \  */
+/* Created: 2022-03-28 09:44:03   $Barahmou           \/        \/      \_/  */
+/* Updated: 2022-03-28 09:44:03 by Barahmou                                  */
+/*                                                                           */
+/*****************************************************************************/
+
+#include <stddef.h>
 
 /**
- * _strchr - returns pointer to first occurence of char c
- *			 if char c is not found then return NULL
- *			 if c is '\0' then return pointer to end of string
- * @s: char array to be searched
- * @c: char needed to search in char array
+ * _strchr - a function ...
+ * @s: the chaine
+ * @c: the char
  *
- * Return: character array 'char *s'
+ * Return: 1 or 0
  */
 
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	while (s[i] + 1)
-	{
-		if (s[i] == c)
-		{
-			return (s + i);
-		}
-		i++;
-	}
-
-	return (NULL);
+	for (; *s != '\0' && *s != c; ++s)
+		;
+	return (*s == c ? (char *) s : NULL);
 }
+

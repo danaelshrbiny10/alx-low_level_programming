@@ -1,46 +1,50 @@
-#include<stdio.h>
-#include "main.h"
+/*****************************************************************************/
+/*                                                                           */
+/*                                               _____  ______    ____  ___  */
+/* 0-memset.c                                   /  _  \ |    |    \   \/  /  */
+/*                                             /  /_\  \|    |     \     /   */
+/* By: Barahmou   <hamabarhamou@gmail.com>    /    |    \    |___  /     \   */
+/*                                            \____|__  /_______ \/___/\  \  */
+/* Created: 2022-03-28 09:44:03   $Barahmou           \/        \/      \_/  */
+/* Updated: 2022-03-28 09:44:03 by Barahmou                                  */
+/*                                                                           */
+/*****************************************************************************/
+
+#include <string.h>
 
 /**
- * _strstr - finds first occurence of needle string in haystack
+ * _strstr - a function ...
+ * @haystack: the chaine
+ * @needle: the chaine
  *
- * @haystack: char array to be searched
- * @needle: string to be matched
- *
- * Return: address of first char byte of the occurence of needle
- *
- * deduction: find length of needle.
- *			  use needle length to see if string is complete
- *			  iterate through all the characters
- *			  if match, increase needle index
- *			  if the needle index j is == len, then return ...
- *			  the haystack index starting at i - length of string
- *			  if j incremented, but stopped matching, reset j = 0
+ * Return: 1 or 0
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j = 0, len = 0;
+	int index;
 
 	if (*needle == 0)
 		return (haystack);
 
-	while (needle[i++])
+	while (*haystack)
 	{
-		len++;
-	}
+		index = 0;
 
-
-	for (i = 0; haystack[i]; i++)
-	{
-		if (j > 0 && haystack[i] != needle[j])
-			j = 0;
-		if (haystack[i] == needle[j])
+		if (haystack[index] == needle[index])
 		{
-			j += 1;
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+
+				index++;
+
+			} while (haystack[index] == needle[index]);
 		}
-		if (j == len)
-			return (haystack + i - len + 1);
+
+		haystack++;
 	}
-	return (NULL);
+
+	return ('\0');
 }
+

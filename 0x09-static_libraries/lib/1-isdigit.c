@@ -1,11 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _isdigit - checks for digit
- * @c: input char to be checked
+ * _isdigit - a function that checks for digi character.
+ * @c: third integer
  *
- * Return: 1 if it is a digit, 0 otherwise
+ * Return: 1 or 0
  */
 
 int _isdigit(int c)

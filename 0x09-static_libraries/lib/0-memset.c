@@ -1,13 +1,22 @@
-#include<stdio.h>
-#include "main.h"
+/*****************************************************************************/
+/*                                                                           */
+/*                                               _____  ______    ____  ___  */
+/* 0-memset.c                                   /  _  \ |    |    \   \/  /  */
+/*                                             /  /_\  \|    |     \     /   */
+/* By: Barahmou   <hamabarhamou@gmail.com>    /    |    \    |___  /     \   */
+/*                                            \____|__  /_______ \/___/\  \  */
+/* Created: 2022-03-28 09:44:03   $Barahmou           \/        \/      \_/  */
+/* Updated: 2022-03-28 09:44:03 by Barahmou                                  */
+/*                                                                           */
+/*****************************************************************************/
 
 /**
- * _memset - fills n bytes of char *s with char b
- * @s: character array to be filled
- * @b: char that will fill character array
- * @n: number chars to be filled
+ * _memset - a function ...
+ * @s: the chaine
+ * @b: the char
+ * @n: the int
  *
- * Return: character array 'char *s'
+ * Return: 1 or 0
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -15,9 +24,7 @@ char *_memset(char *s, char b, unsigned int n)
 	unsigned int i = 0;
 
 	for (i = 0; i < n; i++)
-	{
 		s[i] = b;
-	}
-
 	return (s);
 }
+

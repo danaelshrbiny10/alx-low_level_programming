@@ -1,31 +1,31 @@
-#include<stdio.h>
-#include "main.h"
+/*****************************************************************************/
+/*                                                                           */
+/*                                               _____  ______    ____  ___  */
+/* 0-memset.c                                   /  _  \ |    |    \   \/  /  */
+/*                                             /  /_\  \|    |     \     /   */
+/* By: Barahmou   <hamabarhamou@gmail.com>    /    |    \    |___  /     \   */
+/*                                            \____|__  /_______ \/___/\  \  */
+/* Created: 2022-03-28 09:44:03   $Barahmou           \/        \/      \_/  */
+/* Updated: 2022-03-28 09:44:03 by Barahmou                                  */
+/*                                                                           */
+/*****************************************************************************/
+
+#include <string.h>
 
 /**
- * _strspn - returns number of first set of matching characters
+ * _strspn - a function ...
+ * @s: the chaine
+ * @accept: the chaine
  *
- * @s: char array to be searched
- * @accept: string of bytes to be matched
- *
- * Return: number of bytes matched
+ * Return: 1 or 0
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, j = 0, count = 0;
+	unsigned int i = 0;
 
-	for (; s[i]; i++)
-	{
-		for (j = 0; accept[j]; j++)
-		{
-			if (s[i] == accept[j])
-			{
-				count += 1;
-			}
-		}
-		if (!(count > i))
-			break;
-	}
-	return (count);
-
+	while (s[i] && strchr(accept, s[i]))
+		i++;
+	return (i);
 }
+

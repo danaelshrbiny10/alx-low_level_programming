@@ -1,29 +1,40 @@
-#include<stdio.h>
-#include "main.h"
+/*****************************************************************************/
+/*                                                                           */
+/*                                               _____  ______    ____  ___  */
+/* 4-strpbrk.c                                  /  _  \ |    |    \   \/  /  */
+/*                                             /  /_\  \|    |     \     /   */
+/* By: Barahmou   <hamabarhamou@gmail.com>    /    |    \    |___  /     \   */
+/*                                            \____|__  /_______ \/___/\  \  */
+/* Created: 2022-03-28 09:44:03   $Barahmou           \/        \/      \_/  */
+/* Updated: 2022-03-28 09:44:03 by Barahmou                                  */
+/*                                                                           */
+/*****************************************************************************/
+
+#include <string.h>
 
 /**
- * _strpbrk - returns pointer to first byte from accept ...
- *			  matched in string s;
+ * _strpbrk - a function ...
+ * @s: the chaine
+ * @accept: the chaine
  *
- * @s: char array to be searched
- * @accept: string of bytes to be matched
- *
- * Return: address of first byte matched
+ * Return: 1 or 0
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j = 0;
-
-	for (; s[i]; i++)
+	if ((s == NULL) || (accept == NULL))
+		return (NULL);
+	while (*s)
 	{
-		for (j = 0; accept[j]; j++)
+		if (strchr(accept, *s))
 		{
-			if (s[i] == accept[j])
-			{
-				return (s + i);
-			}
+			return (s);
+		}
+		else
+		{
+			s++;
 		}
 	}
 	return (NULL);
 }
+

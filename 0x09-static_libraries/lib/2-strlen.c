@@ -1,22 +1,18 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strlen - function to find length of string
- * @s: pointer to first element of string array
+ * _strlen - a function that takes a pointer to an int as parameter and
+ * updates the value it points to to 98
+ * @s: chaine of caractere
  *
- * Return: the length of the string
+ * Return: 1 or 0
  */
 
 int _strlen(char *s)
 {
-	int counter = 0;
+	int i = 0;
 
-	while (*s != '\0')
-	{
-		counter++;
-		s += 1;
-	}
-
-	return (counter);
+	while (s[i])
+		i++;
+	return (i);
 }

@@ -1,28 +1,28 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strcat - function to concatinate strings
- * @dest: destination string
- * @src: string segment to concatinate to destination string
+ * _strcat - a function ...
+ * @dest: the chaine
+ * @src: the chaine
  *
- * Return: address of destination string
+ * Return: 1 or 0
  */
 
-char *_strcat(char *dest, char *src)
+char	*_strcat(char *dest, char *src)
 {
-	int i = 0, len = 0;
+	int	i;
+	int	j;
 
-	while (dest[i++])
+	i = 0;
+	j = 0;
+	while (dest[i] && dest[i] != '\0')
+		i++;
+	while (src[j])
 	{
-		len++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[len++] = src[i];
-	}
-	dest[len] = '\0';
-
+	dest[i] = '\0';
 	return (dest);
 }

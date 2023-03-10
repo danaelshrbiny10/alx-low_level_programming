@@ -1,16 +1,31 @@
-#include "main.h"
+/*
+******************************************************************************
+*                                                                            *
+*                                                 _____  ______    ____  ___ *
+*    5-printf.c                                  /  _  \ |    |    \   \/  / *
+*                                               /  /_\  \|    |     \     /  *
+*    By: Barahmou <hamabarhamou@gmail.com>     /    |    \    |___  /     \  *
+*                                              \____|__  /_______ \/___/\  \ *
+*    Created: 2022-03-10 13:29:43 by Barahmou          \/        \/      \_/ *
+*    Updated: 2022-03-10 13:29:43 by Barahmou                                *
+*                                                                            *
+******************************************************************************
+*/
 
 /**
- * _islower - is the entry point for program
- * @c: integer ascii value
+ *_islower - a function that checks for lowercase character
+ *@c: The charactere
  *
- * Return: 1 if letter is lowercase, 0 otherwise
+ *Return: On success 1.
+ *On error, -1 is returned, and errno is set appropriately.
+ * Returns 1 if c is lowercase
+ * Returns 0 otherwise
  */
-
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (1);
 	else
 		return (0);
 }
+
