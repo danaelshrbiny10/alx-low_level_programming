@@ -2,7 +2,7 @@
 
   * [libmy.a](./libmy.a)
   * [create_static_lib.sh](./create_static_lib.sh)
-  * [_putchar.c](./_putchar.c)
+  <!-- * [_putchar.c](./_putchar.c) -->
   * [0-isupper.c](./0-isupper.c)
   * [1-strncat.c](./1-strncat.c)
   * [2-strchr.c](./2-strchr.c)
