@@ -2,7 +2,7 @@
 
   * [libmy.a](./libmy.a)
   * [create_static_lib.sh](./create_static_lib.sh)
-  <!-- * [_putchar.c](./_putchar.c)
+  * [_putchar.c](./_putchar.c)
   * [0-isupper.c](./0-isupper.c)
   * [1-strncat.c](./1-strncat.c)
   * [2-strchr.c](./2-strchr.c)
@@ -16,5 +16,5 @@
   * [5-strstr.c](./5-strstr.c)
   * [6-abs.c](./6-abs.c)
   * [9-strcpy.c](./9-strcpy.c)
-  * [100-atoi.c](./100-atoi.c) -->
+  * [100-atoi.c](./100-atoi.c)
   * [liball.a](./liball.a)
